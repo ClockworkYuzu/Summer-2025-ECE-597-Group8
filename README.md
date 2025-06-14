@@ -59,6 +59,7 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 pip install -r requirements.txt
 
 ```
+
 ### 2. Run features extractor
 
 ```bash
