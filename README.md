@@ -68,3 +68,47 @@ python src/phishing_email_preprocessing.py
 Outputs:
 	•	features/features.csv
 	•	features/labels.csv (labels = 1 for now)
+
+
+## 🌿 Git Branch Naming Guidelines
+
+To keep our collaboration organized and readable, we follow a simple and flexible branch naming strategy:
+
+### ✅ Current Naming Style
+
+We use `yourname/task` or `yourname/purpose` format:
+
+- Examples:
+  - `lily/extractor`
+  - `alex/train_model`
+  - `bob/literature_review`
+
+### 🧪 Tips
+
+- Avoid vague names like `changes`, `update`, `fix`
+- Keep it short and meaningful
+- Use lowercase and hyphens for readability
+
+### ✅ Workflow
+
+1. Pull latest changes:  
+ `git pull origin main`
+
+2. Create a branch:  
+ `git checkout -b yourname/task`
+
+3. Make changes and commit:  
+ `git add .`  
+ `git commit -m "Meaningful message"`
+
+4. Push branch:  
+ `git push origin yourname/task`
+
+5. Open Pull Request on GitHub
+- **Base**: `main`
+- **Compare**: `yourname/task` (your feature branch)
+- Add a clear and concise description of what you did
+
+6. Share the PR link in the team chat and wait for at least one teammate to approve before merging
+
+---
