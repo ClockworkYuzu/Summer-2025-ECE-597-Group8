@@ -1,0 +1,17 @@
+beautifulsoup4==4.13.4
+click==8.2.1
+joblib==1.5.1
+nltk==3.9.1
+numpy==2.3.0
+pandas==2.3.0
+python-dateutil==2.9.0.post0
+pytz==2025.2
+regex==2024.11.6
+scikit-learn==1.7.0
+scipy==1.15.3
+six==1.17.0
+soupsieve==2.7
+threadpoolctl==3.6.0
+tqdm==4.67.1
+typing_extensions==4.14.0
+tzdata==2025.2
