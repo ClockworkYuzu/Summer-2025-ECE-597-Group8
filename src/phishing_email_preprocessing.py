@@ -50,6 +50,7 @@ df["text"] = df["text"].fillna("")
 
 # 2. Clean text
 df["clean_text"] = df["text"].apply(clean_text)
+df.to_csv("../data/CaptstoneProjectData_2025_cleaned.csv", index=False)
 
 # 3. Construct features manually
 features = df.apply(extract_features, axis=1)
