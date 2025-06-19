@@ -5,9 +5,9 @@ import nltk
 
 nltk.download('punkt')
 
-
+file_name = 'spam_ham_dataset_cleaned'
 # 1. Load cleaned data
-df = pd.read_csv("../data/CaptstoneProjectData_2025_cleaned.csv")
+df = pd.read_csv(f"../data/{file_name}.csv")
 df["clean_text"] = df["clean_text"].fillna("")
 
 # 2. Tokenize by splitting clean_text
@@ -47,7 +47,6 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 
 # 1. Load cleaned data
-df = pd.read_csv("../data/CaptstoneProjectData_2025_cleaned.csv")
 texts = df["clean_text"].tolist()
 
 # 2. Load pre-trained BERT model (SentenceTransformer)
