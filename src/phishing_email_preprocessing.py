@@ -41,16 +41,17 @@ def extract_features(row):
         "num_exclamations": raw.count("!"),
     })
 
+file_name = 'spam_ham_dataset'
 # 1. Read data
-df = pd.read_csv("../data/CaptstoneProjectData_2025.csv")
-df = df.drop(columns=["Unnamed: 2", "Unnamed: 3"])
+df = pd.read_csv(f"../data/{file_name}.csv")
+# df = df.drop(columns=["Unnamed: 2", "Unnamed: 3"])
 df["Subject"] = df["Subject"].fillna("")
 df["text"] = df["Subject"] + " " + df["Body"]
 df["text"] = df["text"].fillna("")
 
 # 2. Clean text
 df["clean_text"] = df["text"].apply(clean_text)
-df.to_csv("../data/CaptstoneProjectData_2025_cleaned.csv", index=False)
+df.to_csv(f"../data/{file_name}_cleaned.csv", index=False)
 
 # 3. Construct features manually
 features = df.apply(extract_features, axis=1)
@@ -64,7 +65,8 @@ tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_
 X = pd.concat([features.reset_index(drop=True), tfidf_df.reset_index(drop=True)], axis=1)
 
 # 6. Add labels (since all the emails are phishing, set them to 1s)
-y = np.ones(len(X))
+# y = np.ones(len(X))
+y = df['Label']
 
 # 7. Save the data
 X.to_csv("../features/features.csv", index=False)
