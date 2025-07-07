@@ -64,13 +64,11 @@ tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_
 # 5. Combine features
 X = pd.concat([features.reset_index(drop=True), tfidf_df.reset_index(drop=True)], axis=1)
 
-# 6. Add labels (since all the emails are phishing, set them to 1s)
-# y = np.ones(len(X))
+# 6. Extract Labels
 y = df['Label']
 
 # 7. Save the data
 X.to_csv("../features/features.csv", index=False)
-# If we have different labels, uncomment this line
-# pd.DataFrame({"label": y}).to_csv("../features/labels.csv", index=False)
+pd.DataFrame({"label": y}).to_csv("../features/labels.csv", index=False)
 
 print("✅ Feature extration done，save to features.csv")
