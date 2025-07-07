@@ -16,8 +16,8 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 | 1. Literature Review         | ✅ Completed | Studied prior research on phishing detection and email analysis techniques |
 | 2. Data Understanding        | ✅ Completed | Explored email structure: subject, body, headers, common patterns          |
 | 3. Preprocessing & Features  | ✅ Completed | Cleaned emails, extracted structural + TF-IDF features                     |
-| 4. Traditional ML Modeling   | 🔜 Upcoming  | Train Naive Bayes, Logistic Regression, Random Forest                      |
-| 5. Model Evaluation          | 🔜 Upcoming  | Evaluate using AUC, confusion matrix, balanced accuracy                    |
+| 4. Traditional ML Modeling   | 🚀 Ongoing   | Train Naive Bayes, Logistic Regression, Random Forest                      |
+| 5. Model Evaluation          | 🚀 Ongoing   | Evaluate using AUC, confusion matrix, balanced accuracy                    |
 | 6. Optimization & Validation | 🔜 Upcoming  | Address class imbalance, apply cross-validation, hold-out test set         |
 | 7. Advanced: Embedding Model | ✅ Completed | Replace TF-IDF with dense semantic embeddings (e.g., Word2Vec, BERT)       |
 | 8. Final Reporting / CLI     | 🔜 Optional  | Summarize findings, optionally deploy as script or CLI tool                |
@@ -50,6 +50,50 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 ### Textual (semantic):
 
 - Top 300 most informative words via **TF-IDF** on cleaned content
+
+---
+
+## 📊 Model Progress
+
+### ✅ Logistic Regression
+
+**Accuracy**: `95%`
+
+**Confusion Matrix**:
+```
+[[704  31]
+ [ 24 276]]
+```
+
+**Classification Report**:
+
+| Metric         | Ham (0) | Spam (1) | Avg / Total |
+|----------------|---------|----------|-------------|
+| Precision      | 0.97    | 0.90     | 0.93        |
+| Recall         | 0.96    | 0.92     | 0.94        |
+| F1-Score       | 0.96    | 0.91     | 0.94        |
+| Support        | 735     | 300      | 1035        |
+
+---
+
+### ✅ Decision Tree
+
+**Accuracy**: `92%`
+
+**Confusion Matrix**:
+```
+[[684  51]
+ [ 29 271]]
+```
+
+**Classification Report**:
+
+| Metric         | Ham (0) | Spam (1) | Avg / Total |
+|----------------|---------|----------|-------------|
+| Precision      | 0.96    | 0.84     | 0.90        |
+| Recall         | 0.93    | 0.90     | 0.92        |
+| F1-Score       | 0.94    | 0.87     | 0.91        |
+| Support        | 735     | 300      | 1035        |
 
 ---
 
