@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import joblib
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB  # ← NB import
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.naive_bayes import GaussianNB  
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
@@ -50,12 +50,22 @@ best_model = grid.best_estimator_
 
 # Evaluate on test set
 y_pred = best_model.predict(X_test)
-acc = accuracy_score(y_test, y_pred)
-print(f"Test Accuracy: {acc:.4f}")
-print("Classification Report:\n", classification_report(y_test, y_pred))
-print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+# Define the labels for the classes
+target_names = ['Ham (0)', 'Spam (1)']
+
+# Evaluate the model on the test set
+print(f"Test Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+
+# Print the classification report with custom target names
+print("Classification Report:")
+print(classification_report(y_test, y_pred, target_names=target_names))
+
+# Print the confusion matrix
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
 
 # Save the trained model to disk
 model_path = '../models/naive_bayes_model.joblib'
 joblib.dump(best_model, model_path)
 print(f"Model saved to {model_path}")
+
