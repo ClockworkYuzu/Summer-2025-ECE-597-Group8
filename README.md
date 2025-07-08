@@ -16,7 +16,7 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 | 1. Literature Review         | ✅ Completed | Studied prior research on phishing detection and email analysis techniques |
 | 2. Data Understanding        | ✅ Completed | Explored email structure: subject, body, headers, common patterns          |
 | 3. Preprocessing & Features  | ✅ Completed | Cleaned emails, extracted structural + TF-IDF features                     |
-| 4. Traditional ML Modeling   | 🚀 Ongoing   | Train Naive Bayes, Logistic Regression, Random Forest                      |
+| 4. Traditional ML Modeling   | ✅ Completed | Train Naive Bayes, Logistic Regression, Random Forest                      |
 | 5. Model Evaluation          | 🚀 Ongoing   | Evaluate using AUC, confusion matrix, balanced accuracy                    |
 | 6. Optimization & Validation | 🔜 Upcoming  | Address class imbalance, apply cross-validation, hold-out test set         |
 | 7. Advanced: Embedding Model | ✅ Completed | Replace TF-IDF with dense semantic embeddings (e.g., Word2Vec, BERT)       |
@@ -60,6 +60,7 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 **Accuracy**: `95%`
 
 **Confusion Matrix**:
+
 ```
 [[704  31]
  [ 24 276]]
@@ -67,12 +68,12 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 
 **Classification Report**:
 
-| Metric         | Ham (0) | Spam (1) | Avg / Total |
-|----------------|---------|----------|-------------|
-| Precision      | 0.97    | 0.90     | 0.93        |
-| Recall         | 0.96    | 0.92     | 0.94        |
-| F1-Score       | 0.96    | 0.91     | 0.94        |
-| Support        | 735     | 300      | 1035        |
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.97    | 0.90     | 0.93        |
+| Recall    | 0.96    | 0.92     | 0.94        |
+| F1-Score  | 0.96    | 0.91     | 0.94        |
+| Support   | 735     | 300      | 1035        |
 
 ---
 
@@ -81,6 +82,7 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 **Accuracy**: `92%`
 
 **Confusion Matrix**:
+
 ```
 [[684  51]
  [ 29 271]]
@@ -88,12 +90,34 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 
 **Classification Report**:
 
-| Metric         | Ham (0) | Spam (1) | Avg / Total |
-|----------------|---------|----------|-------------|
-| Precision      | 0.96    | 0.84     | 0.90        |
-| Recall         | 0.93    | 0.90     | 0.92        |
-| F1-Score       | 0.94    | 0.87     | 0.91        |
-| Support        | 735     | 300      | 1035        |
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.96    | 0.84     | 0.90        |
+| Recall    | 0.93    | 0.90     | 0.92        |
+| F1-Score  | 0.94    | 0.87     | 0.91        |
+| Support   | 735     | 300      | 1035        |
+
+---
+
+### ✅ Gaussian Naive Bayes
+
+**Accuracy**: `93%`
+
+**Confusion Matrix**:
+
+```
+[[680 55]
+ [ 13 287]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.98    | 0.84     | 0.91        |
+| Recall    | 0.93    | 0.96     | 0.94        |
+| F1-Score  | 0.95    | 0.89     | 0.92        |
+| Support   | 735     | 300      | 1035        |
 
 ---
 
