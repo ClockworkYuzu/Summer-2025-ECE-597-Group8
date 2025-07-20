@@ -121,6 +121,126 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 
 ---
 
+### ✅ Support Vector Machine (SVM)
+
+**Accuracy**: `96%`
+
+**Confusion Matrix**:
+
+```
+[[712  23]
+ [ 16 284]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.98    | 0.93     | 0.95        |
+| Recall    | 0.97    | 0.95     | 0.96        |
+| F1-Score  | 0.97    | 0.94     | 0.95        |
+| Support   | 735     | 300      | 1035        |
+
+**Best Parameters**: `C=10, kernel=rbf, gamma=scale`
+
+---
+
+## 🤖 BERT Embedding Models
+
+### ✅ Logistic Regression (BERT)
+
+**Accuracy**: `97%`
+
+**Confusion Matrix**:
+
+```
+[[728   7]
+ [ 19 281]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.97    | 0.98     | 0.98        |
+| Recall    | 0.99    | 0.94     | 0.96        |
+| F1-Score  | 0.98    | 0.96     | 0.97        |
+| Support   | 735     | 300      | 1035        |
+
+**Best Parameters**: `C=0.1`
+
+---
+
+### ✅ SVM (BERT)
+
+**Accuracy**: `98%`
+
+**Confusion Matrix**:
+
+```
+[[727   8]
+ [  8 292]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.99    | 0.97     | 0.98        |
+| Recall    | 0.99    | 0.97     | 0.98        |
+| F1-Score  | 0.99    | 0.97     | 0.98        |
+| Support   | 735     | 300      | 1035        |
+
+**Best Parameters**: `C=10, kernel=rbf`
+
+---
+
+### ✅ Random Forest (BERT)
+
+**Accuracy**: `95%`
+
+**Confusion Matrix**:
+
+```
+[[720  15]
+ [ 35 265]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.95    | 0.95     | 0.95        |
+| Recall    | 0.98    | 0.88     | 0.93        |
+| F1-Score  | 0.97    | 0.91     | 0.94        |
+| Support   | 735     | 300      | 1035        |
+
+---
+
+### ✅ Naive Bayes (BERT)
+
+**Accuracy**: `91%`
+
+**Confusion Matrix**:
+
+```
+[[665  70]
+ [ 19 281]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.97    | 0.80     | 0.89        |
+| Recall    | 0.90    | 0.94     | 0.92        |
+| F1-Score  | 0.94    | 0.86     | 0.90        |
+| Support   | 735     | 300      | 1035        |
+
+**Best Parameters**: `var_smoothing=0.1`
+
+---
+
 ## 🚀 How to Run
 
 ### 1. Install dependencies
