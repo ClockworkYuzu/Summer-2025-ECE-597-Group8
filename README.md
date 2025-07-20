@@ -121,6 +121,30 @@ We use traditional ML models (e.g., Naive Bayes, Decision Trees) trained on manu
 
 ---
 
+### ✅ Support Vector Machine (SVM)
+
+**Accuracy**: `96%`
+
+**Confusion Matrix**:
+
+```
+[[712  23]
+ [ 16 284]]
+```
+
+**Classification Report**:
+
+| Metric    | Ham (0) | Spam (1) | Avg / Total |
+| --------- | ------- | -------- | ----------- |
+| Precision | 0.98    | 0.93     | 0.95        |
+| Recall    | 0.97    | 0.95     | 0.96        |
+| F1-Score  | 0.97    | 0.94     | 0.95        |
+| Support   | 735     | 300      | 1035        |
+
+**Best Parameters**: `C=10, kernel=rbf, gamma=scale`
+
+---
+
 ## 🚀 How to Run
 
 ### 1. Install dependencies
