@@ -37,7 +37,7 @@ w2v_cols = [f"w2v_{i}" for i in range(w2v_model.vector_size)]
 w2v_df = pd.DataFrame(df["w2v_embedding"].tolist(), columns=w2v_cols)
 result = pd.concat([df.drop(columns=["w2v_embedding"]), w2v_df], axis=1)
 
-# 6. Save to new CSV
+# 6. Save to new CSV - check and it's fine 
 w2v_df.to_csv("../features/w2v_embeddings.csv", index=False)
 
 
@@ -48,7 +48,7 @@ from sentence_transformers import SentenceTransformer
 
 # 1. Load cleaned data
 texts = df["clean_text"].tolist()
-
+#texts = df["clean_text"].tolist()
 # 2. Load pre-trained BERT model (SentenceTransformer)
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
