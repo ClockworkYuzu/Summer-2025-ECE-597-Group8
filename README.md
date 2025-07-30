@@ -292,5 +292,6 @@ We use `yourname/task` or `yourname/purpose` format:
 - Add a clear and concise description of what you did
 
 6. Share the PR link in the team chat and wait for at least one teammate to approve before merging
+### ✅ Presentation Done 
 
 ---
