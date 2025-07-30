@@ -109,6 +109,7 @@ history = FakeHistory(history_data)
 # 5. Evaluate on test set
 # ================================
 loss, acc = model.evaluate(X_test)
+
 print(f"\n✅ Test Accuracy (BERT Fine-tuned Optimized): {acc:.4f}")
 print(f"Best Validation Accuracy during training: {best_val_acc:.4f}")
 
@@ -137,4 +138,4 @@ plt.legend()
 
 plt.tight_layout()
 plt.savefig("../imgs/bert_finetuning_training_curve_final_optimized.png", dpi=300)
-print("✅ Training curve saved to ../imgs/bert_finetuning_training_curve_final_optimized.png")
+print("✅ Training curve saved successfully to ../imgs/bert_finetuning_training_curve_final_optimized.png")
